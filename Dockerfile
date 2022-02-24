@@ -24,6 +24,8 @@ RUN platformio upgrade
 
 RUN platformio platform update
 
+RUN platformio platform install https://github.com/tasmota/platform-espressif32/releases/download/v2.0.2/platform-tasmota-espressif32-2.0.2.zip --with-package framework-arduinoespressif32
+
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
